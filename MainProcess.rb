@@ -31,7 +31,7 @@ def main(srcFile, targetDir)
     fileProcess.createDir(targetDir)
     fileProcess.copySet("static-content","mob")
 
-    df = DocFormatter.new(indexDoc,"A-side","index.html")
+    df = DocFormatter.new(indexDoc,"AA-side","a-side.html")
     File.open(targetDir+"/index.html","w+") do |f| f.write(df.render) end
 
     indexFileTitle = "A-side"
@@ -66,14 +66,14 @@ def main(srcFile, targetDir)
     #
     jsViewFile = IndexFile.new("Public Action JavaScript Articles",jsList)
     jsViewDoc = jsViewFile.toDocNode
-    df = DocFormatter.new(jsViewDoc,"A-side","index.html")
+    df = DocFormatter.new(jsViewDoc,"AA-side","a-side.html")
     File.open(targetDir+"/js-index.html","w+") do |f| f.write(df.render) end
 
     # Write out the new Polyglot index page.
     #
     polyViewFile = IndexFile.new("Public Action PolyGlot Articles",polyList)
     polyViewDoc = polyViewFile.toDocNode
-    df = DocFormatter.new(polyViewDoc,"A-side","index.html")
+    df = DocFormatter.new(polyViewDoc,"AA-side","a-side.html")
     File.open(targetDir+"/polyglot-index.html","w+") do |f| f.write(df.render) end
 
     siteMap = SiteMap.new("http://public-action.org/mob")
