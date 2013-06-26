@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class FileProcess - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>FileProcess.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-copyDir">#copyDir</a>
+    
+    <li><a href="#method-i-copySet">#copySet</a>
+    
+    <li><a href="#method-i-createDir">#createDir</a>
+    
+    <li><a href="#method-i-writeFile">#writeFile</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./gpl-2_0_txt.html">gpl-2.0</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DocFormatter.html">DocFormatter</a>
+  
+    <li><a href="./DocNode.html">DocNode</a>
+  
+    <li><a href="./DocNodeList.html">DocNodeList</a>
+  
+    <li><a href="./DocNodeListHandler.html">DocNodeListHandler</a>
+  
+    <li><a href="./FileProcess.html">FileProcess</a>
+  
+    <li><a href="./IndexFile.html">IndexFile</a>
+  
+    <li><a href="./MobileSiteText.html">MobileSiteText</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SiteMap.html">SiteMap</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class FileProcess</h1>
+
+  <div id="description" class="description">
+    
+<p>Copies a set of files, subdirectories and subdirectory contents  from the
+soure locattion represented by srcParentDir, to the location represented by
+destDir.</p>
+
+<p>param srcParentDir represents the location we are copying from. param
+destDir represnets the location we are copyiny to.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-copyDir" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">copyDir</span><span
+            class="method-args">(src,dest)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="copyDir-source">
+            <pre><span class="ruby-comment"># File FileProcess.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copyDir</span>(<span class="ruby-identifier">src</span>,<span class="ruby-identifier">dest</span>) 
+    <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">cp_r</span>(<span class="ruby-identifier">src</span>,<span class="ruby-identifier">dest</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- copyDir-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- copyDir-method -->
+
+    
+      <div id="method-i-copySet" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">copySet</span><span
+            class="method-args">(srcParentDir, destDir)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="copySet-source">
+            <pre><span class="ruby-comment"># File FileProcess.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copySet</span>(<span class="ruby-identifier">srcParentDir</span>, <span class="ruby-identifier">destDir</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">srcParentDir</span>) <span class="ruby-keyword">then</span>
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">srcParentDir</span>) {
+            <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+            <span class="ruby-comment"># Dir.foreach returns &quot;.&quot; and &quot;..&quot;. Those evaluate to parent directories, </span>
+            <span class="ruby-comment"># parent directories and files we don't want to copy. So we filter those </span>
+            <span class="ruby-comment"># patterns out.</span>
+            <span class="ruby-keyword">if</span>  (<span class="ruby-identifier">file</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">file</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;..&quot;</span>) <span class="ruby-keyword">then</span>
+                <span class="ruby-identifier">srcPath</span> = <span class="ruby-identifier">srcParentDir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">file</span>
+                <span class="ruby-identifier">destPath</span> = <span class="ruby-identifier">destDir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">file</span>
+                <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">cp_r</span>(<span class="ruby-identifier">srcPath</span>,<span class="ruby-identifier">destPath</span>)
+            <span class="ruby-keyword">end</span>
+        }
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- copySet-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- copySet-method -->
+
+    
+      <div id="method-i-createDir" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">createDir</span><span
+            class="method-args">(subDir)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="createDir-source">
+            <pre><span class="ruby-comment"># File FileProcess.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">createDir</span>(<span class="ruby-identifier">subDir</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">subDir</span>) <span class="ruby-keyword">then</span>
+       <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-identifier">subDir</span>) 
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- createDir-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- createDir-method -->
+
+    
+      <div id="method-i-writeFile" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writeFile</span><span
+            class="method-args">(fileName, doc)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="writeFile-source">
+            <pre><span class="ruby-comment"># File FileProcess.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeFile</span>(<span class="ruby-identifier">fileName</span>, <span class="ruby-identifier">doc</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">fileName</span>,<span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> 
+        <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">doc</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writeFile-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writeFile-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

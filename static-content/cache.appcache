@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 2013  vers 1.12
+#
+#
+# Explicitly cached 'master entries'.
+CACHE:
+css/bootstrap/css/bootstrap.min.css
+css/bootstrap/css/img/glyphicons-halflings.png
+css/bootstrap/css/img/glyphicons-halflings-white.png
+

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Object - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>DocNodeParser.rb
+    <li>MainProcess.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">BasicObject
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">LibXML</span>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-main">#main</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./gpl-2_0_txt.html">gpl-2.0</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DocFormatter.html">DocFormatter</a>
+  
+    <li><a href="./DocNode.html">DocNode</a>
+  
+    <li><a href="./DocNodeList.html">DocNodeList</a>
+  
+    <li><a href="./DocNodeListHandler.html">DocNodeListHandler</a>
+  
+    <li><a href="./FileProcess.html">FileProcess</a>
+  
+    <li><a href="./IndexFile.html">IndexFile</a>
+  
+    <li><a href="./MobileSiteText.html">MobileSiteText</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SiteMap.html">SiteMap</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Object</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-main" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">main</span><span
+            class="method-args">(srcFile, targetDir)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>A simple command line utility which converts a website’s rss xml feed in to
+a mobilzed version of the website.</p>
+
+<p>param args the command line arguments.. Required: -in INFILE -out OUTPUTDIR
+INFILE represents the rss xml feed saved to disk as a file. OUTPUTDIR is a
+directory name which this program creates. The output directory location is
+created relative to the current directory.</p>
+          
+
+          
+          <div class="method-source-code" id="main-source">
+            <pre><span class="ruby-comment"># File MainProcess.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">main</span>(<span class="ruby-identifier">srcFile</span>, <span class="ruby-identifier">targetDir</span>) 
+    <span class="ruby-identifier">io</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">srcFile</span>, <span class="ruby-string">'rb'</span>)
+    <span class="ruby-identifier">parser</span> = <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">SaxParser</span>.<span class="ruby-identifier">io</span>(<span class="ruby-identifier">io</span>,<span class="ruby-value">:encoding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span>)
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">callbacks</span> = <span class="ruby-constant">DocNodeListHandler</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">parse</span>
+    <span class="ruby-identifier">list</span> = <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">callbacks</span>.<span class="ruby-identifier">getList</span>.<span class="ruby-identifier">getList</span>
+    <span class="ruby-comment"># fix the contact box and change category links</span>
+    <span class="ruby-identifier">mobileText</span> = <span class="ruby-constant">MobileSiteText</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">list</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">mobileText</span>.<span class="ruby-identifier">findAndReplace</span>(<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">body</span>)}
+
+    <span class="ruby-identifier">indexFile</span> = <span class="ruby-constant">IndexFile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Public Action Articles&quot;</span>,<span class="ruby-identifier">list</span>)
+    <span class="ruby-identifier">indexDoc</span> = <span class="ruby-identifier">indexFile</span>.<span class="ruby-identifier">toDocNode</span>
+
+    <span class="ruby-identifier">fileProcess</span> = <span class="ruby-constant">FileProcess</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">fileProcess</span>.<span class="ruby-identifier">createDir</span>(<span class="ruby-identifier">targetDir</span>)
+    <span class="ruby-identifier">fileProcess</span>.<span class="ruby-identifier">copySet</span>(<span class="ruby-string">&quot;static-content&quot;</span>,<span class="ruby-string">&quot;mob&quot;</span>)
+
+    <span class="ruby-identifier">df</span> = <span class="ruby-constant">DocFormatter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">indexDoc</span>,<span class="ruby-string">&quot;A-side&quot;</span>,<span class="ruby-string">&quot;index.html&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">targetDir</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/index.html&quot;</span>,<span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">df</span>.<span class="ruby-identifier">render</span>) <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">indexFileTitle</span> = <span class="ruby-string">&quot;A-side&quot;</span>
+    <span class="ruby-identifier">indexFileHref</span>= <span class="ruby-string">&quot;index.html&quot;</span>
+
+    <span class="ruby-identifier">df</span>.<span class="ruby-identifier">homeLinks</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">df</span>.<span class="ruby-identifier">linkText</span> = <span class="ruby-identifier">indexFileTitle</span>
+    <span class="ruby-identifier">df</span>.<span class="ruby-identifier">href</span> = <span class="ruby-identifier">indexFileHref</span> 
+
+    <span class="ruby-identifier">jsList</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">polyList</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+
+    <span class="ruby-comment"># As we look through the docNodes </span>
+    <span class="ruby-comment"># create an html document file and capture a list of file name/links</span>
+    <span class="ruby-comment"># for our new JavaScript and Polglot index pages</span>
+    <span class="ruby-comment"># Npte! We need to trim the category term (strip)</span>
+    <span class="ruby-identifier">list</span>.<span class="ruby-identifier">each</span> {
+        <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> 
+            <span class="ruby-identifier">df</span>.<span class="ruby-identifier">docNode</span> = <span class="ruby-identifier">doc</span>
+            <span class="ruby-identifier">fileProcess</span>.<span class="ruby-identifier">writeFile</span>(<span class="ruby-identifier">targetDir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">link</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;.html&quot;</span>,  <span class="ruby-identifier">df</span>.<span class="ruby-identifier">render</span>)
+            <span class="ruby-identifier">categories</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">getCategories</span>
+            <span class="ruby-identifier">categories</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">category</span><span class="ruby-operator">|</span> 
+            <span class="ruby-comment"># we need to trim the value then compare</span>
+            <span class="ruby-keyword">case</span> <span class="ruby-identifier">category</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;JavaScript&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">jsList</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">doc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Polyglot&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">polyList</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">doc</span>)
+            <span class="ruby-keyword">end</span>
+        }
+    }
+
+    <span class="ruby-comment"># Write out the new JavaScript index page.</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">jsViewFile</span> = <span class="ruby-constant">IndexFile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Public Action JavaScript Articles&quot;</span>,<span class="ruby-identifier">jsList</span>)
+    <span class="ruby-identifier">jsViewDoc</span> = <span class="ruby-identifier">jsViewFile</span>.<span class="ruby-identifier">toDocNode</span>
+    <span class="ruby-identifier">df</span> = <span class="ruby-constant">DocFormatter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">jsViewDoc</span>,<span class="ruby-string">&quot;A-side&quot;</span>,<span class="ruby-string">&quot;index.html&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">targetDir</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/js-index.html&quot;</span>,<span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">df</span>.<span class="ruby-identifier">render</span>) <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Write out the new Polyglot index page.</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">polyViewFile</span> = <span class="ruby-constant">IndexFile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Public Action PolyGlot Articles&quot;</span>,<span class="ruby-identifier">polyList</span>)
+    <span class="ruby-identifier">polyViewDoc</span> = <span class="ruby-identifier">polyViewFile</span>.<span class="ruby-identifier">toDocNode</span>
+    <span class="ruby-identifier">df</span> = <span class="ruby-constant">DocFormatter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">polyViewDoc</span>,<span class="ruby-string">&quot;A-side&quot;</span>,<span class="ruby-string">&quot;index.html&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">targetDir</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/polyglot-index.html&quot;</span>,<span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">df</span>.<span class="ruby-identifier">render</span>) <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">siteMap</span> = <span class="ruby-constant">SiteMap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;http://public-action.org/mob&quot;</span>)
+    <span class="ruby-identifier">siteMap</span>.<span class="ruby-identifier">writeOutputFile</span>(<span class="ruby-identifier">targetDir</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/sitemap.xml&quot;</span>,<span class="ruby-identifier">list</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Execution complete.&quot;</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- main-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- main-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

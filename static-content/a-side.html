@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Public Action</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="css/bootstrap/css/bootstrap.min.css" media="all" rel="stylesheet"/>
+        <style>
+            .wow {
+                color:white;
+            }
+            .wee {
+                color:gold;
+            }
+            .contact:hoover:after {
+                content: "<div>lorinmk@public-action.org</div>";
+            }
+            #contactbox {
+                font-weight: bold;   
+                margin-left: -10px;
+                width:90%;
+                background:white;
+                box-shadow:10px 10px 5px #888;
+            }
+
+            @media all and (max-width: 480px)  {
+                .greeting {
+                  margin-bottom: 5px;
+                }
+            }
+        </style>
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="prerender" href="http://public-action.org/mob/index.html" />
+        <script>
+            var ContactBox = function(target_el) {
+              
+                this.init = function(target_el) {
+                    this.targel_el = target_el;
+                    this.state = false;
+                };
+              
+                this.render = function() {
+                     var msg = "lorinmk @ public-action.org";
+                    var div = document.createElement("div");
+                    div.setAttribute("class", "alert alert-block alert-info");
+                    div.setAttribute("id", "contactbox");
+                    div.textContent = msg;
+                    var cache = this.targel_el.innerHTML;
+                    this.targel_el.innerHTML = div.outerHTML + cache;
+                };
+                this.hide = function() {
+                    var contactBox = document.querySelector("#contactbox");      
+                   this.targel_el.removeChild(contactBox);
+                };
+                
+                this.toggle = function() {
+                    if (this.state === true) {
+                        this.hide();
+                        this.state = false;
+                    } else {
+                        this.render();
+                        this.state = true;
+                    }
+                };
+                this.init(target_el);
+            };
+            
+            var ContactListener = function(event) {
+                    event.preventDefault();
+                    var origin = event.target.tagName;
+                    contactBox.toggle();
+            };
+
+        </script>
+    </head>
+    <body>
+
+
+        <div class="container-fluid">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                        <li> <a class="brand" href="#"><span class="wow">Public</span> <span class="wee">Action</span></a></li>
+                        <li><a href="index.html">A-side</a></li>
+                    </ul>     
+                </div>
+            </div>
+
+         
+            <div class="row-fluid">
+                <div class="span12 greeting">
+                    Greetings. My name is Lorin. Public Action is my website.
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <span class ="muted">About me.</span><p> I wrote and recorded "Learn to Say Goodbye", reviewed as <a href="http://inthezenarcade.blogspot.com/2011/01/dv8-learn-to-say-goodbye-bw-guns-on.html" target="_blank">"the best Clash song the Clash never wrote"</a>.
+                    </p>
+                    <p>I added bi-directional indexing to the database engine servicing the first online trading system (Globex - Reuters, Chicago Mercantile Exchange (CME) - written in "C"). </p>
+                    <p>I wrote the "TeleStat" system for the CME (first release). Written in J2EE and VoiceXML, TeleStat reported market positions over the telephone.
+                    </p>
+                    <p>
+                        I have written and spoke publicly  on  politics, art, public policy, social justice issues, here there and everywhere.</p>
+                    <p>
+                        My web site "Public Action" is read by hundreds of programmers each day. I have written extensively about the PHP content management system "Drupal". </p>
+
+                    <p>I architect and document computer programs, information systems.  Versed in all tiers (front-end, back-end, etc)</p>
+                    <p>I am creative, analytical and I can think critically. I like to read. I run a couple miles along Lake Michigan each day. I enjoy learning. I stay current with technology.</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="span12">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="alert alert-success" id="contact">
+                        I am open for work. <br/>Contract or hire.  <br/><abbr title="write to lorinmk at public-action.org">Drop me a note.</abbr> <span class="muted"><br/>No recruiters please.</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+         <script>
+                document.onreadystatechange = function () {
+                    if (document.readyState === "complete") {
+                        var contactDiv = document.querySelector("#contact");
+                        contactBox = new ContactBox(contactDiv);
+                        contactDiv.addEventListener("click", ContactListener, true);			  
+                    }
+                };
+            </script>
+    </body>
+
+</html>

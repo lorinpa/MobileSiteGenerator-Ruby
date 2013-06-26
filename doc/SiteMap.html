@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class SiteMap - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>SiteMap.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-convertDate">#convertDate</a>
+    
+    <li><a href="#method-i-convertMonth">#convertMonth</a>
+    
+    <li><a href="#method-i-fullLink">#fullLink</a>
+    
+    <li><a href="#method-i-writeOutputFile">#writeOutputFile</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./gpl-2_0_txt.html">gpl-2.0</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DocFormatter.html">DocFormatter</a>
+  
+    <li><a href="./DocNode.html">DocNode</a>
+  
+    <li><a href="./DocNodeList.html">DocNodeList</a>
+  
+    <li><a href="./DocNodeListHandler.html">DocNodeListHandler</a>
+  
+    <li><a href="./FileProcess.html">FileProcess</a>
+  
+    <li><a href="./IndexFile.html">IndexFile</a>
+  
+    <li><a href="./MobileSiteText.html">MobileSiteText</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SiteMap.html">SiteMap</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class SiteMap</h1>
+
+  <div id="description" class="description">
+    
+<p><a href="SiteMap.html">SiteMap</a> constructs a xml document used by search
+engines like Google to index our website artivles.</p>
+
+<p>Note! On my site the rss feed is published in descending order by publish
+data thus the first articles in the rss feed (for my site) has the most
+recent date</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(baseAddr)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File SiteMap.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">baseAddr</span>)
+    <span class="ruby-ivar">@baseAddr</span> = <span class="ruby-identifier">baseAddr</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-convertDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convertDate</span><span
+            class="method-args">(date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="convertDate-source">
+            <pre><span class="ruby-comment"># File SiteMap.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convertDate</span>(<span class="ruby-identifier">date</span>)
+    <span class="ruby-identifier">elems</span> = <span class="ruby-identifier">date</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot; &quot;</span>)
+    <span class="ruby-identifier">elems</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">convertMonth</span>(<span class="ruby-identifier">elems</span>[<span class="ruby-value">2</span>]) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">elems</span>[<span class="ruby-value">1</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- convertDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- convertDate-method -->
+
+    
+      <div id="method-i-convertMonth" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convertMonth</span><span
+            class="method-args">(monthStr)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="convertMonth-source">
+            <pre><span class="ruby-comment"># File SiteMap.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convertMonth</span>(<span class="ruby-identifier">monthStr</span>) 
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">monthStr</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Jan&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;01&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Feb&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;02&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Mar&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;03&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Apr&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;04&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;May&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;05&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Jun&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;06&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Jul&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;07&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Aug&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;08&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Sep&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;09&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Oct&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;10&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Nov&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;11&quot;</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Dec&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;12&quot;</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- convertMonth-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- convertMonth-method -->
+
+    
+      <div id="method-i-fullLink" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fullLink</span><span
+            class="method-args">(link)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="fullLink-source">
+            <pre><span class="ruby-comment"># File SiteMap.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fullLink</span>(<span class="ruby-identifier">link</span>)
+    <span class="ruby-ivar">@baseAddr</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span> <span class="ruby-identifier">link</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.html&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fullLink-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fullLink-method -->
+
+    
+      <div id="method-i-writeOutputFile" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writeOutputFile</span><span
+            class="method-args">(fileName, docList)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="writeOutputFile-source">
+            <pre><span class="ruby-comment"># File SiteMap.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeOutputFile</span>(<span class="ruby-identifier">fileName</span>, <span class="ruby-identifier">docList</span>) 
+
+    <span class="ruby-comment"># Note! On my site the rss feed is published in descending order by publish data</span>
+    <span class="ruby-comment"># thus then first articles in the rss feed (for my site) has the most recent date</span>
+
+    <span class="ruby-ivar">@output</span> =
+    <span class="ruby-node">&quot;&lt;urlset xmlns=\&quot;http://www.sitemaps.org/schemas/sitemap/0.9\&quot;
+      xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot;
+      xsi:schemaLocation=\&quot;http://www.sitemaps.org/schemas/sitemap/0.9
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\&quot;&gt;
+      &lt;url&gt;
+        &lt;loc&gt;#{@baseAddr}&lt;/loc&gt;
+        &lt;changefreq&gt;daily&lt;/changefreq&gt;
+        &lt;priority&gt;1.0&lt;/priority&gt;
+        &lt;lastmod&gt;#{convertDate(docList[0].pubDate)}&lt;/lastmod&gt;
+      &lt;/url&gt;&quot;</span>
+
+     <span class="ruby-identifier">docList</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@output</span> <span class="ruby-operator">&lt;&lt;</span> 
+        <span class="ruby-node">&quot;&lt;url&gt;
+            &lt;loc&gt;#{fullLink(doc.link)}&lt;/loc&gt;
+            &lt;lastmod&gt;#{convertDate(doc.pubDate)}&lt;/lastmod&gt;
+        &lt;/url&gt;&quot;</span>
+      }
+    <span class="ruby-ivar">@output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&lt;/urlset&gt;&quot;</span>
+
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">fileName</span>,<span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@output</span>) <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writeOutputFile-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writeOutputFile-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

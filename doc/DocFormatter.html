@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DocFormatter - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>DocFormatter.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">ERB::Util</span>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-get_binding">#get_binding</a>
+    
+    <li><a href="#method-i-render">#render</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./gpl-2_0_txt.html">gpl-2.0</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DocFormatter.html">DocFormatter</a>
+  
+    <li><a href="./DocNode.html">DocNode</a>
+  
+    <li><a href="./DocNodeList.html">DocNodeList</a>
+  
+    <li><a href="./DocNodeListHandler.html">DocNodeListHandler</a>
+  
+    <li><a href="./FileProcess.html">FileProcess</a>
+  
+    <li><a href="./IndexFile.html">IndexFile</a>
+  
+    <li><a href="./MobileSiteText.html">MobileSiteText</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SiteMap.html">SiteMap</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DocFormatter</h1>
+
+  <div id="description" class="description">
+    
+<p>This class creates an html document. The contstructor takes four
+parameters.</p>
+<ul><li>
+<p>docNode contains the document fragments parsed from RSS XML document</p>
+</li><li>
+<p>linkText The text (description) of a link located at the documents top
+section.  Typically links to either the website index.html (table of
+contents) or a “about me” page.</p>
+</li><li>
+<p>href The url portion of the link located at the the document top section.
+Corresponding url to “linkText”</p>
+</li><li>
+<p>homeLinks is a boolean value. True means we render links to the table of
+contents index,html document.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-docNode" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">docNode</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-homeLinks" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">homeLinks</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-href" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">href</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-linkText" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">linkText</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-template" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">template</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(docNode, linkText, href, homeLinks = false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File DocFormatter.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">docNode</span>, <span class="ruby-identifier">linkText</span>, <span class="ruby-identifier">href</span>, <span class="ruby-identifier">homeLinks</span> = <span class="ruby-keyword">false</span>)
+    <span class="ruby-ivar">@docNode</span> = <span class="ruby-identifier">docNode</span>
+    <span class="ruby-ivar">@linkText</span> = <span class="ruby-identifier">linkText</span>
+    <span class="ruby-ivar">@href</span> = <span class="ruby-identifier">href</span>
+    <span class="ruby-ivar">@homeLinks</span> = <span class="ruby-identifier">homeLinks</span>
+    <span class="ruby-ivar">@style</span> = 
+        <span class="ruby-node">%Q{&lt;style&gt;
+          .wow {
+            color:white;
+          }
+          .wee {
+            color:gold;
+          }
+          .contact:hoover:after {
+            content: &quot;&lt;div&gt;lorinmk@public-action.org&lt;/div&gt;&quot;;
+          }
+          #contactbox {
+                font-weight: bold;
+                margin-left: -10px;
+                width:90%;
+                background:white;
+                box-shadow:10px 10px 5px #888;
+            }
+          @media all and (max-width: 480px) {
+            .greeting {
+              margin-bottom: 5px;
+            }
+          }
+        &lt;/style&gt;
+        }</span>
+
+    <span class="ruby-ivar">@contactBoxJS</span> =
+            <span class="ruby-node">%Q{&lt;script&gt;
+            var ContactBox = function(target_el) {
+                this.init = function(target_el) {
+                    this.targel_el = target_el;
+                    this.state = false;
+                };
+                this.render = function() {
+                    var msg = &quot;lorinmk @ public-action.org&quot;;
+                    var div = document.createElement(&quot;div&quot;);
+                    div.setAttribute(&quot;class&quot;, &quot;alert alert-block alert-info&quot;);
+                    div.setAttribute(&quot;id&quot;, &quot;contactbox&quot;);
+                    div.textContent = msg;
+                    var cache = this.targel_el.innerHTML;
+                    this.targel_el.innerHTML = div.outerHTML + cache;
+                };
+                this.hide = function() {
+                    var contactBox = document.querySelector(\&quot;#contactbox\&quot;);
+                    this.targel_el.removeChild(contactBox);
+                };
+                this.toggle = function() {
+                    if (this.state === true) {
+                        this.hide();
+                        this.state = false;
+                    } else {
+                        this.render();
+                        this.state = true;
+                    }
+                };
+                this.init(target_el);
+            };
+            var ContactListener = function(event) {
+                    event.preventDefault();
+                    var origin = event.target.tagName;
+                    contactBox.toggle();
+            };
+        &lt;/script&gt;
+    }</span>
+
+
+    <span class="ruby-ivar">@docReadyJS</span> =
+           <span class="ruby-node">%Q{
+            &lt;script&gt;
+                document.onreadystatechange = function () {
+                    if (document.readyState === &quot;complete\&quot;) {
+                        var contactDiv = document.querySelector(&quot;#contact&quot;);
+                        contactBox = new ContactBox(contactDiv);
+                        contactDiv.addEventListener(&quot;click&quot;, ContactListener, true); 
+                    }
+                };
+            &lt;/script&gt;}</span>
+
+    <span class="ruby-ivar">@docType</span> = <span class="ruby-string">&quot;&lt;!DOCTYPE html&gt;&quot;</span>
+
+  <span class="ruby-ivar">@template</span> = 
+  <span class="ruby-node">%Q{&lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;&lt;%= @docNode.title %&gt;&lt;/title&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;/&gt;
+    &lt;link type=&quot;text/css&quot; href=&quot;css/bootstrap/css/bootstrap.min.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; id=&quot;bootstrap&quot;/&gt;
+    &lt;%= @style %&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.png&quot;/&gt;
+    &lt;link rel=&quot;prerender&quot; href=&quot;http://public-action.org/mob/index.html&quot; /&gt;
+    &lt;%= @contactBoxJS %&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;navbar navbar-inverse&quot;&gt;
+            &lt;div class=&quot;navbar-inner&quot;&gt;
+              &lt;ul class=&quot;nav&quot;&gt;
+                &lt;li&gt;&lt;a class=&quot;brand&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;wow&quot;&gt;Public&lt;/span&gt; &lt;span class=&quot;wee&quot;&gt;Action&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&lt;%= @href %&gt;&gt;&lt;%= @linkText %&gt;&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+   &lt;div class=&quot;container-fluid&quot;&gt;
+     &lt;article&gt;
+       &lt;% if @homeLinks then %&gt; 
+        &lt;div class=&quot;page-header&quot;&gt;
+            &lt;h4 class=&quot;h4&quot;&gt;&lt;%= @docNode.title %&gt;&lt;/h4&gt;
+            &lt;div class=&quot;pull-right&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;&lt;i class=&quot;icon-home&quot;&gt;&lt;/i&gt; - Home&lt;/a&gt;&lt;/div&gt;
+       &lt;/div&gt;
+        &lt;% end %&gt;
+       &lt;%= @docNode.body %&gt;
+     &lt;/article&gt;
+       &lt;%  if @homeLinks then %&gt;
+    &lt;div class=&quot;pull-right&quot;&gt;
+      &lt;a href=&quot;index.html&quot;&gt;&lt;i class=&quot;icon-home&quot;&gt;&lt;/i&gt; - Home&lt;/a&gt;
+     &lt;/div&gt;
+       &lt;% end %&gt;
+    &lt;/div&gt;
+     &lt;%= @docReadyJS %&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+  }</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-get_binding" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_binding</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_binding-source">
+            <pre><span class="ruby-comment"># File DocFormatter.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_binding</span>
+    <span class="ruby-identifier">binding</span>()
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_binding-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_binding-method -->
+
+    
+      <div id="method-i-render" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render-source">
+            <pre><span class="ruby-comment"># File DocFormatter.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render</span>()
+    <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@template</span>).<span class="ruby-identifier">result</span>(<span class="ruby-identifier">get_binding</span>())
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- render-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- render-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

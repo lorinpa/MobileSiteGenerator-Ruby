@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DocNode - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>DocNodeParser.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-addCategory">#addCategory</a>
+    
+    <li><a href="#method-i-getCategories">#getCategories</a>
+    
+    <li><a href="#method-i-get_binding">#get_binding</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./gpl-2_0_txt.html">gpl-2.0</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DocFormatter.html">DocFormatter</a>
+  
+    <li><a href="./DocNode.html">DocNode</a>
+  
+    <li><a href="./DocNodeList.html">DocNodeList</a>
+  
+    <li><a href="./DocNodeListHandler.html">DocNodeListHandler</a>
+  
+    <li><a href="./FileProcess.html">FileProcess</a>
+  
+    <li><a href="./IndexFile.html">IndexFile</a>
+  
+    <li><a href="./MobileSiteText.html">MobileSiteText</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SiteMap.html">SiteMap</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DocNode</h1>
+
+  <div id="description" class="description">
+    
+<p><a href="DocNode.html">DocNode</a> represents a single website article. All
+properties are mutable and contain getter/setters. Constructor does not
+require any parameters. @category_list represents a list terms that
+"categorize" the article document</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-body" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">body</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-link" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">link</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-pubDate" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">pubDate</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-title" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">title</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>() 
+    <span class="ruby-ivar">@category_list</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-addCategory" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">addCategory</span><span
+            class="method-args">(category)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="addCategory-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">addCategory</span>(<span class="ruby-identifier">category</span>)
+    <span class="ruby-ivar">@category_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">category</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- addCategory-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- addCategory-method -->
+
+    
+      <div id="method-i-getCategories" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCategories</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="getCategories-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCategories</span> 
+    <span class="ruby-ivar">@category_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCategories-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCategories-method -->
+
+    
+      <div id="method-i-get_binding" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_binding</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_binding-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_binding</span>
+    <span class="ruby-identifier">binding</span>()
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_binding-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_binding-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

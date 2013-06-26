@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class MobileSiteText - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>MobileSiteText.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-findAndReplace">#findAndReplace</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./gpl-2_0_txt.html">gpl-2.0</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DocFormatter.html">DocFormatter</a>
+  
+    <li><a href="./DocNode.html">DocNode</a>
+  
+    <li><a href="./DocNodeList.html">DocNodeList</a>
+  
+    <li><a href="./DocNodeListHandler.html">DocNodeListHandler</a>
+  
+    <li><a href="./FileProcess.html">FileProcess</a>
+  
+    <li><a href="./IndexFile.html">IndexFile</a>
+  
+    <li><a href="./MobileSiteText.html">MobileSiteText</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SiteMap.html">SiteMap</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MobileSiteText</h1>
+
+  <div id="description" class="description">
+    
+<p>Utility class which edits each article’s body.</p>
+<ul><li>
+<p>We replace the contact box with a mobile friendly contact mechanism.</p>
+</li><li>
+<p>We replace the href to JavaScript teasers with our new mobile JavaScript
+index page</p>
+</li><li>
+<p>We replace the href to the Polylot teasers with our new mobile Polyglot
+index page</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-findAndReplace" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">findAndReplace</span><span
+            class="method-args">(body)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="findAndReplace-source">
+            <pre><span class="ruby-comment"># File MobileSiteText.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">findAndReplace</span>(<span class="ruby-identifier">body</span>)
+  <span class="ruby-identifier">token</span> = <span class="ruby-string">&quot; - I'm an experienced developer. My main interest is in new technology. Please use our contact box &lt;a href=\&quot;http://public-action.org/contact\&quot; target=\&quot;_blank\&quot;&gt;here&lt;/a&gt; if you are interested in hiring me. Please no recruiters :)&quot;</span>
+  <span class="ruby-identifier">replace</span> = <span class="ruby-string">&quot;is an experienced developer focused on  new technology. Open for work (contract or hire), &lt;a id=\&quot;contact\&quot; href=\&quot;http://public-action.org/mob/contact\&quot; target=\&quot;_blank\&quot;&gt;Drop Lorin  a note. &lt;/a&gt; &lt;span class=\&quot;muted\&quot;&gt;  Please no recruiters :)&lt;/span&gt;&quot;</span>
+  <span class="ruby-ivar">@body</span> = <span class="ruby-identifier">body</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">token</span>,<span class="ruby-identifier">replace</span>)
+
+  <span class="ruby-identifier">token</span> = <span class="ruby-string">&quot;http://public-action.org/category/technology/javascript&quot;</span>
+  <span class="ruby-identifier">replace</span> = <span class="ruby-string">&quot;js-index.html&quot;</span>
+  <span class="ruby-ivar">@body</span> = <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">token</span>,<span class="ruby-identifier">replace</span>)
+
+  <span class="ruby-identifier">token</span> = <span class="ruby-string">&quot;http://public-action.org/category/technology/polyglot&quot;</span>
+  <span class="ruby-identifier">replace</span> = <span class="ruby-string">&quot;polyglot-index.html&quot;</span>
+  <span class="ruby-ivar">@body</span> = <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">token</span>,<span class="ruby-identifier">replace</span>)
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- findAndReplace-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- findAndReplace-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

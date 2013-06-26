@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DocNodeListHandler - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>DocNodeParser.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">XML::SaxParser::Callbacks</span>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-getList">#getList</a>
+    
+    <li><a href="#method-i-on_characters">#on_characters</a>
+    
+    <li><a href="#method-i-on_end_element_ns">#on_end_element_ns</a>
+    
+    <li><a href="#method-i-on_start_element">#on_start_element</a>
+    
+    <li><a href="#method-i-splitLink">#splitLink</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./gpl-2_0_txt.html">gpl-2.0</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DocFormatter.html">DocFormatter</a>
+  
+    <li><a href="./DocNode.html">DocNode</a>
+  
+    <li><a href="./DocNodeList.html">DocNodeList</a>
+  
+    <li><a href="./DocNodeListHandler.html">DocNodeListHandler</a>
+  
+    <li><a href="./FileProcess.html">FileProcess</a>
+  
+    <li><a href="./IndexFile.html">IndexFile</a>
+  
+    <li><a href="./MobileSiteText.html">MobileSiteText</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SiteMap.html">SiteMap</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DocNodeListHandler</h1>
+
+  <div id="description" class="description">
+    
+<p><a href="DocNodeListHandler.html">DocNodeListHandler</a> is a SAX event
+listener. As the SAX parser recognized  portions of the RSS XML document we
+are interested in, this class populates a collection of DocNodes
+(DocNoldeList) This class uses libxml-ruby</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+    <span class="ruby-ivar">@start</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@docNodeList</span> = <span class="ruby-constant">DocNodeList</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@docNode</span> = <span class="ruby-constant">DocNode</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@sb</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getList" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getList</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="getList-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getList</span>
+    <span class="ruby-ivar">@docNodeList</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getList-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getList-method -->
+
+    
+      <div id="method-i-on_characters" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">on_characters</span><span
+            class="method-args">(chars)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="on_characters-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">on_characters</span> (<span class="ruby-identifier">chars</span>)
+    <span class="ruby-ivar">@sb</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">chars</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- on_characters-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- on_characters-method -->
+
+    
+      <div id="method-i-on_end_element_ns" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">on_end_element_ns</span><span
+            class="method-args">(name, prefix, uri)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="on_end_element_ns-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">on_end_element_ns</span> (<span class="ruby-identifier">name</span>, <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">uri</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;title&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-ivar">@docNode</span>.<span class="ruby-identifier">title</span> = <span class="ruby-ivar">@sb</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;item&quot;</span>  <span class="ruby-keyword">then</span> 
+                <span class="ruby-ivar">@docNodeList</span>.<span class="ruby-identifier">add</span>(<span class="ruby-ivar">@docNode</span>)
+                <span class="ruby-ivar">@docNode</span> = <span class="ruby-constant">DocNode</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;pubDate&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-ivar">@docNode</span>.<span class="ruby-identifier">pubDate</span> = <span class="ruby-ivar">@sb</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;link&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-ivar">@docNode</span>.<span class="ruby-identifier">link</span> = <span class="ruby-identifier">splitLink</span>(<span class="ruby-ivar">@sb</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;description&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-ivar">@docNode</span>.<span class="ruby-identifier">body</span> = <span class="ruby-ivar">@sb</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;category&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-ivar">@docNode</span>.<span class="ruby-identifier">addCategory</span>(<span class="ruby-ivar">@sb</span>)
+    <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- on_end_element_ns-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- on_end_element_ns-method -->
+
+    
+      <div id="method-i-on_start_element" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">on_start_element</span><span
+            class="method-args">(element, attributes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="on_start_element-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">on_start_element</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">attributes</span>)
+    <span class="ruby-ivar">@sb</span> = <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;language&quot;</span> <span class="ruby-keyword">then</span>
+        <span class="ruby-ivar">@start</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;item&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@start</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">then</span>
+        <span class="ruby-ivar">@docNode</span> = <span class="ruby-constant">DocNode</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- on_start_element-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- on_start_element-method -->
+
+    
+      <div id="method-i-splitLink" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">splitLink</span><span
+            class="method-args">(link)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="splitLink-source">
+            <pre><span class="ruby-comment"># File DocNodeParser.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">splitLink</span>(<span class="ruby-identifier">link</span>)
+    <span class="ruby-identifier">elems</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;/&quot;</span>)
+    <span class="ruby-identifier">num_elems</span> = (<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">elems</span>[<span class="ruby-identifier">num_elems</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- splitLink-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- splitLink-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
